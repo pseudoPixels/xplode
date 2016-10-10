@@ -40,6 +40,15 @@ public class PlayerController : MonoBehaviour {
         else if (horizontalInput < 0 && isFacingRight) playerFlip();
         anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
 
+        //Player shooting
+        if (Input.GetButton("Fire1"))
+        {
+            anim.SetBool("Shoot",true);
+        }
+        else{
+            anim.SetBool("Shoot", false);
+        }
+
     }
 
     void playerFlip(){
