@@ -20,7 +20,7 @@ public class CameraController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	    if(playerController.isPlayerAlive() == true){
-            cameraNewPosition = new Vector3(playerTransform.position.x+3.0f, playerTransform.position.y+3.0f, transform.position.z);
+            cameraNewPosition = new Vector3(playerTransform.position.x+3.0f, transform.position.y, transform.position.z);
             transform.position = cameraNewPosition;
         }
 	}
